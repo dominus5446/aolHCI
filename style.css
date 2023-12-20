@@ -1,0 +1,25 @@
+
+.custom-button {
+
+    padding: 10px 20px; /* Adjust padding to make the button more clickable */
+    background-color: #005186; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+
+}
+.custom-button:hover {
+    background-color: #2980b9;
+}
+body {
+    background-color: #00aeff; /* Replace with your desired color */
+}
+.container {
+    text-align: center; /* Center aligns content horizontally */
+    margin-top: 50px; /* Adjust margin as needed */
+}
+.containerRegister {
+    text-align: center; /* Center aligns content horizontally */
+    margin-top: 10px; /* Adjust margin as needed */
+}
