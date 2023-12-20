@@ -32,7 +32,7 @@
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
 
-      // Save user data to localStorage (not secure for sensitive information)
+    
       localStorage.setItem("username", username);
       localStorage.setItem("password", password);
 
@@ -43,7 +43,7 @@
       var loginUsername = document.getElementById("loginUsername").value;
       var loginPassword = document.getElementById("loginPassword").value;
 
-      // Retrieve user data from localStorage
+ 
       var storedUsername = localStorage.getItem("username");
       var storedPassword = localStorage.getItem("password");
 
@@ -55,7 +55,7 @@
       }
     }
     function register() {
-    // Redirect to another page
+
     window.location.href = 'register.html';
 }
   </script>
