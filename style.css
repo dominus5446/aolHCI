@@ -23,3 +23,19 @@ body {
     text-align: center; 
     margin-top: 10px;
 }
+input[type="text"] {
+    border-radius: 10px; /* Adjust the value to round the corners more or less */
+    padding: 8px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add a border for visibility */
+}
+input[type="text"] {
+    border-radius: 10px; /* Adjust the value to round the corners more or less */
+    padding: 8px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add a border for visibility */
+}
+input[type="password"] {
+    border-radius: 10px; /* Adjust the value to round the corners more or less */
+    padding: 8px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add a border for visibility */
+}
+

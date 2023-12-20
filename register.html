@@ -3,24 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Authentication</title>
-  <style>
-    /* Your CSS styles here */
-  </style>
+  <title>hci</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="registrationForm">
-    <label for="username">Username:</label>
-    <input type="text" id="username" required>
+  <div  class="container" id="registrationForm">
+    <label   for="username">Username:</label>
     <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" required>
+    <input  type="text" id="username" required>
     <br>
-    <label for="Email">Email:</label>
-    <input type="text" id="Email" required>
-    <button onclick="register()">Register</button>
-    <button onclick="login()">Login</button>
+    <label   for="password">Password:</label>
+    <br>
+    <input  type="password" id="password" required>
+    <br>
+    <label  for="Email">Email:</label>
+    <br>
+    <input   type="text" id="Email" required>
+    <br>
+    <label  for="PhoneNumber">PhoneNumber:</label>
+    <br>
+    <input   type="text" id="PhoneNumber" required>
+    <br>
+    <button class="custom-button" onclick="register()">Register</button>
+    <button class="custom-button" onclick="login()">Login</button>
   </div>
 
   <script>
@@ -28,6 +35,7 @@
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
       var Email = document.getElementById("Email").value;
+      var PhoneNumber = document.getElementById("PhoneNumber").value;
 
       // Save user data to localStorage (not secure for sensitive information)
       localStorage.setItem("username", username);
