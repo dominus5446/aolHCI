@@ -39,3 +39,27 @@ input[type="password"] {
     border: 1px solid #ccc; /* Add a border for visibility */
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.profile-section {
+    margin-bottom: 15px;
+}
+.label {
+    font-weight: bold;
+}
+.backgroundprofile{
+    background-color: white;
+}
+.profileBackground{
+    background-color: white;
+    width: 550px;
+    height: 1080px;
+}
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Creates a round shape */
+    object-fit: fill; /* Helps maintain aspect ratio */
+}

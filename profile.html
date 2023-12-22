@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hci</title>
+   
+    <link rel="stylesheet" href="style.css">
+    <style>
+     
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .profile-section {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px; /* Rounded corners */
+            background-color: #f5f5f5; /* Background color */
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        /* Style for the round profile image */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Creates a round shape */
+            object-fit: cover; /* Helps maintain aspect ratio */
+        }
+   
+    </style>
+</head>
+<body>
+
+   <div class="container" id="profileForm" width="">
+    <div class="profile-section">
+        <h1>User Profile</h1>
+        <img class="profile-photo" src="profile.png" alt="Profile Photo">
+        <div class="label">Name:</div>
+        <div>Ben Dover</div>
+    </div>
+    
+    <div class="profile-section">
+        <div class="label">Phone Number:</div>
+        <div>(+62) 4566757890</div>
+    </div>
+    
+    <div class="profile-section">
+        <div class="label">Email:</div>
+        <div>Bendover123@gmail.com</div>
+    </div>
+    
+    <div class="profile-section">
+        <div class="label">Personal Information:</div>
+        <div>Gender: Male</div>
+        <div>Weight: 27kg</div>
+        <div>Height: 175cm</div>
+        <div>Age: 22 y/o</div>
+    </div>
+   </div> 
+   <button class="custom-button" onclick="home()">Back</button>
+   <script>    
+   function home() {
+
+    window.location.href = 'home.html';
+}
+  </script>
+</body>
+</html>
