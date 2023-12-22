@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+<body>
+    <div class="topside">
+      <nav class="topbar">
+      <a href="./checkout.html"><ion-icon name="arrow-back-outline"></ion-icon></a>
+      <h4 style="font-weight: bold;"> Card Payment</h4>
+    </nav>
+    </div>
+    <div style="margin-left: 700px; margin-top: 100px;">
+        <img width="500px" src="./Card.png" alt="">
+    </div>
+    <div style="display: flex;" class="payments2">
+        <h4>
+          subtotal
+        </h4>
+        <p style="margin-left: 790px; color: grey;">Rp 240.000</p>
+      </div>
+      <div style="display: flex;" class="payments2">
+        <h4>
+          tax
+        </h4>
+        <p style="margin-left: 825px; color: grey;">Rp 15.000</p>
+      </div>
+      <div style="display: flex;" class="payments2">
+        <h4 style="color: black; font-weight: bold; margin-bottom: 150px;">
+          Total
+        </h4>
+        <p style="margin-left: 810px; color: black; font-weight: bold;">Rp 15.000</p>
+      </div>
+
+      <div class="pay-container">
+        <a style="font-weight: bold; margin-left: 430px; font-size: 40px;" href="./checkout.html">Pay now</a>
+      </div>
+
+  
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+
+    document.getElementById('addAddressBtn').addEventListener('click', function(event) {
+      event.preventDefault();
+  
+      const newAddressContainer = document.createElement('div');
+      newAddressContainer.className = 'address-container';
+  
+      newAddressContainer.innerHTML = `
+        <label class="container" contenteditable="true"> Enter new title
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <div class="item-desc">
+          <div>
+            <h4 contenteditable="true">enter new number</h4>
+          </div>
+          <div>
+            <p contenteditable="true">enter new Address</p>
+          </div>
+        </div>
+      `;
+  
+      const addressesContainer = document.getElementById('addresses-container');
+      addressesContainer.appendChild(newAddressContainer);
+    });
+
+  function handlePayPalPayment() {
+    alert("Payment successful!");
+    window.location.href = "./home.html";
+  }
+
+  const paypalLink = document.querySelector('.payment-container a[title="PayPal"]');
+  console.log(paypalLink); 
+  if (paypalLink) {
+    paypalLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      handlePayPalPayment();
+    });
+  }
+  
+  function handlePayPalPayment() {
+    window.location.href = "./payment.html";
+  }
+
+  const cardlink = document.querySelector('.payment-container a[title="Card"]');
+  console.log(cardlink); 
+  if (cardlink) {
+    cardlink.addEventListener('click', function(event) {
+      event.preventDefault();
+      handlePayPalPayment();
+    });
+  }
+  </script>
+</body>
+</html>

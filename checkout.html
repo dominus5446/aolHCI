@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+<body>
+    <div class="topside">
+      <nav class="topbar">
+      <a href="./cart.html"><ion-icon name="arrow-back-outline"></ion-icon></a>
+      <h4 style="font-weight: bold;"> Checkout</h4>
+    </nav>
+    </div>
+  <div class="moreitems" style="margin-right: 500px;">
+    <h4>Total</h4>
+    <h4>240.000</h4>
+  </div>
+  <div class="address">
+    <h2>
+        Delivery Address
+    </h2>
+  </div>
+  <div id="addresses-container">
+  <div class="address-container">
+    <label class="container">Home
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+  <div class="item-desc">
+    <div>
+    <h4>
+        (205) 555-024
+    </h4>
+  </div>
+  <div>
+    <p>
+        1786 Wheeler Bridge
+    </p>
+  </div>
+  </div>
+  </div>
+</div>
+
+  <div id="addresses-container">
+  <div class="address-container" style="margin-bottom: 0px;">
+    <label class="container">Office
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+  <div class="item-desc">
+    <div>
+    <h4>
+        (205) 555-024
+    </h4>
+  </div>
+  <div>
+    <p>
+        1786 Wheeler Bridge
+    </p>
+  </div>
+  </div>
+  </div>
+</div>
+
+  <div class="linkaddress" style="margin-bottom: 100px;">
+    <a style="text-decoration: none; margin-left: 1300px; color: black; font-weight: bold;" href="#" id="addAddressBtn">
+      + add address
+    </a>
+  </div>
+  <div class="payments1">
+    <h2>
+        Payment method (press left image for paypal and right image for credit/debit card)
+    </h2>
+  </div>
+  <div class="payment-container" >
+    <div style="margin-top: 35px; margin-left: 100px;">
+    <a href="#" style="font-size: 30px; text-decoration: none; color: blue;" title="PayPal">
+        <ion-icon name="logo-paypal"></ion-icon>
+    </a>
+    </div>
+    <div style="margin-top: 35px; margin-left: 750px;">
+        <a href="#" style="font-size: 30px; color: black;" title="Card">
+            <ion-icon name="card-outline"></ion-icon>   
+        </a>  
+        </div>
+  </div>
+
+  
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+
+    document.getElementById('addAddressBtn').addEventListener('click', function(event) {
+      event.preventDefault();
+  
+      const newAddressContainer = document.createElement('div');
+      newAddressContainer.className = 'address-container';
+  
+      newAddressContainer.innerHTML = `
+        <label class="container" contenteditable="true"> Enter new title
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <div class="item-desc">
+          <div>
+            <h4 contenteditable="true">enter new number</h4>
+          </div>
+          <div>
+            <p contenteditable="true">enter new Address</p>
+          </div>
+        </div>
+      `;
+  
+      const addressesContainer = document.getElementById('addresses-container');
+      addressesContainer.appendChild(newAddressContainer);
+    });
+
+  function handlePayPalPayment() {
+    alert("Payment successful!");
+    window.location.href = "./home.html";
+  }
+
+  const paypalLink = document.querySelector('.payment-container a[title="PayPal"]');
+  console.log(paypalLink); 
+  if (paypalLink) {
+    paypalLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      handlePayPalPayment();
+    });
+  }
+  
+  function handlePayPalPayment() {
+    window.location.href = "./payment.html";
+  }
+
+  const cardlink = document.querySelector('.payment-container a[title="Card"]');
+  console.log(cardlink); 
+  if (cardlink) {
+    cardlink.addEventListener('click', function(event) {
+      event.preventDefault();
+      handlePayPalPayment();
+    });
+  }
+  </script>
+</body>
+</html>

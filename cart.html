@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+<body>
+    <div class="topside">
+      <nav class="topbar">
+      <a href="./shop.html"><ion-icon name="arrow-back-outline"></ion-icon></a>
+      <h4 style="font-weight: bold;"> Your cart</h4>
+    </nav>
+    </div>
+  <div class="moreitems">
+    <a href="./shop.html">+ Add more items</a>
+  </div>
+  <div class="item-container">
+    <div>
+    <img width="135px" src="./image 134.png" alt="Nopicture">
+  </div>
+  <div class="item-desc">
+    <div>
+    <h4>
+      Sugar Free Gold
+    </h4>
+  </div>
+  <div>
+    <p>
+      Bottle of 500 pellets
+    </p>
+  </div>
+  <div class="price">
+    <h2>
+      Rp. 120.000
+    </h2>
+  </div>
+  </div>
+  <div class="wrapper">
+    <span class="minus">-</span>
+    <span class="num">01</span>
+    <span class="plus">+</span>
+  </div>
+  </div>
+
+  <div class="item-container">
+    <div>
+    <img width="135px" src="./image 135.png" alt="Nopicture">
+  </div>
+  <div class="item-desc">
+    <div>
+    <h4>
+      Sugar Free Gold
+    </h4>
+  </div>
+  <div>
+    <p>
+      Bottle of 500 pellets
+    </p>
+  </div>
+  <div class="price">
+    <h2>
+      Rp. 120.000
+    </h2>
+  </div>
+  </div>
+  <div class="wrapper2">
+    <span class="minus2">-</span>
+    <span class="num2">01</span>
+    <span class="plus2">+</span>
+  </div>
+  </div>
+
+  <div class="payments1">
+    <h2>
+      Payment Summary
+    </h2>
+  </div>
+  <div style="display: flex;" class="payments2">
+    <h4>
+      Order Total
+    </h4>
+    <p style="margin-left: 825px; font-weight: bold;">Rp 240.000</p>
+  </div>
+  <div style="display: flex;" class="payments3">
+    <h4>
+      Items Discount
+    </h4>
+    <p style="margin-left: 805px; font-weight: bold;">0</p>
+  </div>
+  <div style="display: flex;" class="payments4">
+    <h4>
+      Coupon Discount
+    </h4>
+    <p style="margin-left: 790px; font-weight: bold;">0</p>
+  </div>
+  <div style="display: flex;" class="payments5">
+    <h4>
+      Shipping
+    </h4>
+    <p style="margin-left: 850px; font-weight: bold;">FREE</p>
+  </div>
+  <div style="display: flex;" class="payments5">
+    <h4>
+      Total
+    </h4>
+    <p style="margin-left: 875px; font-weight: bold;">Rp 240.000</p>
+  </div>
+  <div class="pay-container">
+    <a style="font-weight: bold; margin-left: 450px; font-size: 40px;" href="./checkout.html">Place Order</a>
+  </div>
+
+  
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+  const plus = document.querySelector(".plus"),
+   minus = document.querySelector(".minus"),
+   num = document.querySelector(".num");
+   let a = 1;
+   plus.addEventListener("click", ()=>{
+     a++;
+     a = (a < 10) ? "0" + a : a;
+     num.innerText = a;
+   });
+   minus.addEventListener("click", ()=>{
+     if(a > 1){
+       a--;
+       a = (a < 10) ? "0" + a : a;
+       num.innerText = a;
+     }
+   });
+ </script>
+
+<script>
+  const plus2 = document.querySelector(".plus2"),
+   minus2 = document.querySelector(".minus2"),
+   num2 = document.querySelector(".num2");
+   let a2 = 1;
+   plus2.addEventListener("click", ()=>{
+     a2++;
+     a2 = (a2 < 10) ? "0" + a2 : a2;
+     num2.innerText = a2;
+   });
+   minus2.addEventListener("click", ()=>{
+     if(a2 > 1){
+       a2--;
+       a2 = (a2 < 10) ? "0" + a2 : a2;
+       num2.innerText = a;
+     }
+   });
+ </script>
+</body>
+</html>
