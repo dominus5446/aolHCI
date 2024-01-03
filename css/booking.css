@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h2, h3 {
+    color: #3498db;
+}
+
+.hidden {
+    display: none;
+}
+
+#bookingForm {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.hotel-list-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hotel-card {
+    background-color: #fff;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    overflow: hidden;
+}
+
+.image-container {
+    flex: 0 0 40%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Pindahkan ke mode kolom */
+}
+
+.rating {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: auto; /* Pindahkan ke bagian paling bawah */
+}
+
+#hospitalDetails {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-info {
+    margin-top: 20px;
+}
+
+#backButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#backButton:hover {
+    background-color: #2980b9;
+}
+
+#searchContainer {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+#searchContainer button {
+    background-color: #fff;
+    color: #3498db;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchContainer button:hover {
+    background-color: #ddd;
+}

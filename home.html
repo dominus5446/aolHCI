@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+
+<div id="profile-container">
+    <img id="profile-img" src="./assets/profile.png" alt="">
+    <div id="dropdown">
+    <a href="./profile.html" class="dropdown-item">Profil Saya</a>
+    <a href="./login.html" class="dropdown-item" onclick="logout()">Logout</a>
+</div>
+
+<div>
+    <input type="text" id="search-bar" placeholder="Search for hospital">
+    <button id="search-button" onclick="search()"><img src="./assets/search.png" alt=""></button>
+</div>
+
+<div id="map"></div>
+
+<span id="ours">Our Services</span>
+<span id="sa">See All</span>
+
+    <div id="feature">
+        <div id="bookh">
+            <a href="./bookhospital.html">
+                <img src="./assets/bookh.png" alt="" id="bookh-img">
+                <span id="bookh-t">Book Hospital</span>
+            </a>
+        </div>
+        <div id="makea">
+            <a href="./makeappoinment.html">
+                <img src="./assets/makea.png" alt="" id="makea-img">
+                <span id="makea-t">Make Appointment</span>
+            </a>
+        </div>
+        <div id="healths">
+            <a href="./healthshop.html">
+                <img src="./assets/healths.png" alt="" id="healths-img">
+                <span id="healths-t">Health Shop</span>
+            </a>
+        </div>
+        <div id="heartc">
+            <a href="./heartcare.html">
+                <img src="./assets/heartc.png" alt="" id="heartc-img">
+                <span id="heartc-t">Heart Care</span>
+            </a>
+        </div>
+    </div>
+
+<div id="navbar">
+    <div id="background-nav"></div>
+    <a href="./home.html">
+        <img src="./assets/home.png" alt="" id="nav-home-img">
+        <span id="nav-home-t">Home</span>
+    </a>
+    <a href="./notification.html">
+        <img src="./assets/notification.png" alt="" id="nav-notif-img">
+        <span id="nav-notif-t">Notification</span>
+    </a>
+    <a href="./location.html">
+        <img src="./assets/location.png" alt="" id="nav-loc-img">
+        <span id="nav-loc-t">Near Me</span>
+    </a>
+    <a href="./profile.html">
+        <img src="./assets/account.png" alt="" id="nav-acc-img">
+        <span id="nav-acc-t">Account</span>
+    </a>
+</div>
+
+<div id="promo-book">
+    <img src="./assets/bookh2.png" alt="" id="bookh2-img">
+    <span id="bookh2-t">Book a Hospital Room Near you</span>
+    <a href="./bookhospital.html" id="bookh2-btn-t">Book Now</a>
+    <div id="bookh2-bg"></div>
+</div>
+
+</body>
+<script src="./js/home.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9XdY33N5SV1kazjCHR4b0zM7yaj156pA&callback=initMap"
+async defer></script>
+</html>

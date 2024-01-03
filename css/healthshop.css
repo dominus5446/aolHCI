@@ -569,3 +569,21 @@ body{
     margin-left: 1340px;
     color: #000;
 }
+
+#cart-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#cart-button a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+#cart-button img {
+    width: 50px; 
+    margin-right: 5px;
+}

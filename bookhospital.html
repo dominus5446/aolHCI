@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/booking.css">
+    <title>Rumah Sakit Booking</title>
+</head>
+<body>
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search hospitals...">
+        <button onclick="searchHospitals()">Search</button>
+    </div>
+
+    <div id="bookingForm" class="hidden">
+        <h2>Booking Form</h2>
+        <form id="patientForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="illness">Illness:</label>
+            <input type="text" id="illness" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" required>
+                <option value="standard">Standard</option>
+                <option value="deluxe">Deluxe</option>
+            </select>
+            <button type="button" onclick="bookAppointment()">Book Appointment</button>
+        </form>
+    </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 2.webp" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>MAYO CLINIC ROCHESTER</h3>
+                <h4>Location: 200 1st St SW, Rochester, MN 55905</h4>
+                <p>Mayo Clinic is the largest integrated, not-for-profit medical group practice in the world. We're building the future, one where the best possible care is available to everyone — and more people can heal at home. Our relentless research turns into earlier diagnoses and new cures. That's how we inspire hope in those who need it most.</p>
+                <p>At Mayo Clinic, experts work together to solve the most challenging unmet needs of patients. Our history of innovation dates back almost 150 years, when brothers Will and Charlie Mayo pioneered an integrated, team-based approach to medicine. Today, that trailblazing spirit drives innovations like Mayo Clinic Platform — which powers new technologies to change how care is delivered to all.</p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+        
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 1.jpg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>THE JOHNS HOPKINS HOSPITAL</h3>
+                <h4>Location: 1800 Orleans St, Baltimore, MD 21287</h4>
+                <p>The Johns Hopkins Hospital has been named an Honor Roll hospital in U.S. News & World Report’s 2023–24 Best Hospitals list. The U.S. News Honor Roll is composed of the 20 top-ranked hospitals in the nation among 4,500. This year’s honor roll is the first to not assign individual ranks to the top 20 hospitals.</p>
+                <p>In Maryland and the Baltimore region, The Johns Hopkins Hospital was the top-ranked hospital, as well as 15 of its medical specialties. Four other Johns Hopkins Medicine member hospitals in Maryland and Washington, D.C. — Johns Hopkins Bayview Medical Center, Johns Hopkins Howard County Medical Center, Sibley Memorial Hospital and Suburban Hospital — were also recognized in state and regional rankings. </p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 3.jpg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>CLEVELAND CLINIC</h3>
+                <h4>Location: 9500 Euclid Ave.Cleveland, Ohio 44195</h4>
+                <p>Cleveland Clinic was at the forefront of modern medicine when it was first organized as a multi-specialty group practice in 1921. From a small outpatient clinic, it has grown to become the world’s first integrated international health system. With more than 65,000 caregivers worldwide, Cleveland Clinic has almost 6 million patient visits per year, at more than 200 locations.</p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 4.jpg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>UNIVERSITY HEALTH NETWORK</h3>
+                <h4>Location: 101 College St, Toronto, ON M5G 1L7, Canada</h4>
+                <p>University Health Network encompasses the Toronto General and Toronto Western hospitals, the Princess Margaret Cancer Centre, Toronto Rehabilitation Institute, and The Michener Institute of Education at UHN. The scope of research and complexity of cases at UHN has made us a national and international source for discovery, education and patient care. We have the largest hospital-based research program in Canada, with major research in cardiology, transplantation, neurosciences, oncology, surgical innovation, infectious diseases, genomic medicine and rehabilitation medicine.</p>
+                <p>In 2019, Toronto General Hospital was named among the world's Top 10 Hospitals by Newsweek magazine. We were ranked first on Canada's Top 40 Research Hospitals list for 2018, and have been consistently ranked at the top since the rankings began by Research Infosource Inc. in 2011.</p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 5.jpg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>KAROLINSKA - UNIVERSITATSKRANKENHAUS</h3>
+                <h4>Location: Gävlegatan 55, 171 64 Solna</h4>
+                <p>Karolinska University Hospital is one of the largest university hospitals in Europe. Together with the world-renowned Karolinska Institutet (KI), we are at the forefront of medical breakthroughs with the aim of knowing more tomorrow than we know today.</p>
+                <p></p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 6.jpg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>CHARITE - UNIVERSITATSMEDIZIN</h3>
+                <h4>Location: Charitépl. 1, 10117 Berlin</h4>
+                <p>Charité - Universitätsmedizin Berlin is one of the largest university hospitals in Europe. All of our clinical care, research and teaching is delivered by physicians and researchers of the highest international standard. Charité proudly lays claim to more than half of all German Nobel Prize winners in Physiology or Medicine, including Emil von Behring, Robert Koch, and Paul Ehrlich. Charité is internationally renowned for its excellence in teaching and training. The Charité is the joint medical faculty of Freie Universität Berlin and Humboldt-Universität zu Berlin. Charité extends over four campuses, and has over 100 different Departments and Institutes, which make up a total of 17 different CharitéCenters. Having marked its 300-year anniversary in 2010, Charité is now one of the largest employers in Berlin. </p>
+                <p></p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 7.jpeg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>UNIVERSITY HOSPITAL PITIE SALPETRIERE - CHARLES FOIX</h3>
+                <h4>Location: 47-83 Bd de l'Hôpital, 75013 Paris</h4>
+                <p>The Pitié Salpêtrière University Hospital is a public health establishment which is part of the Assistance Publique – Hôpitaux de Paris (AP-HP).
+                A local and specialty, teaching and research hospital, the Pitié Salpêtrière hospital is, by its size, the leading French hospital group.</p>
+                <p></p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 8.jpg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>SINGAPORE GENERAL HOSPITAL</h3>
+                <h4>Location: Bukit Merah, Central Region, Singapore</h4>
+                <p>Singapore General Hospital (SGH) is an academic health science centre and tertiary referral hospital in Singapore. It is located next to the Bukit Merah and Chinatown districts of the Central Region, close to the Outram Community Hospital (OCH), which functions as a supplementary community and rehabilitation hospital to SGH for newly-discharged patients.</p>
+                <p></p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 9.jpg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>UCLA HEALTH RONALD REAGAN MEDICAL CENTER</h3>
+                <h4>Location: 757 Westwood Plaza, Los Angeles, California 90095</h4>
+                <p>Founded in 1955, UCLA Medical Center became Ronald Reagan UCLA Medical Center in 2008, reopening in a new 10-story structure (eight above ground) that takes hospital design to a new level. The latest medical advances are provided in a welcoming environment that is filled with light and open spaces to enhance a sense of wellness and promote healing.</p>
+                <p></p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+        <div class="hotel-card" onclick="showHospitalDetails('hospital1')">
+            <div class="image-container">
+                <img src="./assets/Hospital 10.jpeg" alt="Hospital 1">
+            </div>
+            <div class="info-container">
+                <h3>THE UNIVERSITY of TOKYO HOSPITAL</h3>
+                <h4>Location: 7 Chome-3-1 Hongo, Bunkyo City, Tokyo 113-8655</h4>
+                <p>The University of Tokyo Hospital contributes to the advancement of clinical medicine and the cultivation of healthcare
+                    professionals in order to provide each patient with the best medical care.responsibilities and mission as a hospital that creates
+                    a better tomorrow for medical care. Thank you for your continued support and cooperation.</p>
+                <p></p>
+                <div class="rating">5.0</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="hospitalDetails" class="hidden">
+        <img id="hospitalImage" src="" alt="Hospital Image">
+        <div class="hospital-info">
+            <h2 id="hospitalName">Hospital Name</h2>
+            <p id="hospitalDescription">Hospital Description</p>
+            <button onclick="showBookingForm()">Book Now</button>
+        </div>
+    </div>
+
+    <button id="backButton" class="hidden" onclick="goBack()">Back</button>
+    
+    <script src="./js/booking.js"></script>
+</body>
+</html>

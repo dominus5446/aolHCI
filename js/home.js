@@ -18,6 +18,7 @@ function search() {
     alert('Hasil Pencarian Untuk: ' + searchTerm);
 }
 
+
 var map;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -25,3 +26,4 @@ var map;
         zoom: 8
         });
     }
+

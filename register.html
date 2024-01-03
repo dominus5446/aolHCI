@@ -9,27 +9,26 @@
 </head>
 <body>
 
-  <div  class="container" id="registrationForm">
+  <div class="container" id="registrationForm">
     <h1>Welcome to Sehatin</h1>
     <h5>Create an Account</h5>
-    <label   for="username">Username:</label>
+    <label for="username">Username:</label>
     <br>
-    <input  type="text" id="username" required>
+    <input type="text" id="username" required>
     <br>
-    <label   for="password">Password:</label>
+    <label for="password">Password:</label>
     <br>
-    <input  type="password" id="password" required>
+    <input type="password" id="password" required>
     <br>
-    <label  for="Email">Email:</label>
+    <label for="Email">Email:</label>
     <br>
-    <input   type="text" id="Email" required>
+    <input type="text" id="Email" required>
     <br>
-    <label  for="PhoneNumber">PhoneNumber:</label>
+    <label for="PhoneNumber">PhoneNumber:</label>
     <br>
-    <input   type="text" id="PhoneNumber" required>
+    <input type="text" id="PhoneNumber" required>
     <br>
     <button class="custom-button" onclick="register()">Register</button>
-    <button class="custom-button" onclick="login()">Login</button>
   </div>
 
   <script>
@@ -39,23 +38,14 @@
       var Email = document.getElementById("Email").value;
       var PhoneNumber = document.getElementById("PhoneNumber").value;
 
-      // Save user data to localStorage (not secure for sensitive information)
+      // Save user data to localStorage
       localStorage.setItem("username", username);
       localStorage.setItem("password", password);
       localStorage.setItem("email", Email);
+      localStorage.setItem("phoneNumber", PhoneNumber);
 
       alert("Registration successful!");
-    }
-
-    function login() {
       window.location.href = 'login.html';
-
-      if (loginUsername === storedUsername && loginPassword === storedPassword) {
-        alert("Login successful!");
-        window.location.href = "index.html"
-      } else {
-        alert("Login failed. Please check your username and password.");
-      }
     }
   </script>
 
